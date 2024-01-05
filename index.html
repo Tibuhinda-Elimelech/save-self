@@ -2,10 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Save Self</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEROAIDS</title>
 </head>
+<style>
+    body { margin: 0; padding: 0;
+     font-family: Arial, sans-serif; 
+     }
+
+     header {
+        background-color: red;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    header a:hover {
+        background-color: white;
+        color: red;
+    }
+    header img {
+            width: 50px;
+            height: 50px;
+    }
+    @keyframes changeBackgroundColor {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: white;
+    }
+    100% {
+        background-color: red;
+    }
+    #background {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    animation: changeBackgroundColor 4s infinite;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.container img {
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+/* Add the following animations */
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ... include the rest of the animations */    
+
+
+
+</style>
+</style>
 <body>
-   <h1>Educating about HIV/AIDS and Promoting Abstinence PREPARED BY ELIMELECH</h1>
+    <!-- HEADER START -->
+   <header id="background"> 
+    <img src="logo.JPEG" alt="Logo">
+    <a href="#" id="home">HOME</a>
+    <a href="#" id="explore-aids">EXPLORE AIDS</a> 
+    <a href="#" id="aids-stories">AIDS STORIES</a>
+    <a href="#" id="events">EVENTS</a>
+    <a href="#" id="forum">FORUM</a>
+   </header>
+
+   <div class="container">
+        <img class="container" src="http://unaids.org/sites/default/files/media/UNAIDS-hp-top-2000-v2.jpg" alt="Image 1" height="870em">
+        <img class="container" src="https://www.unaids.org/sites/default/files/styles/webstory_ptohogallerytopimage/public/WAD23_Postcard-13_En_960x618px_0.png?itok=kny0nRdm" alt="Image 2" height="820em">
+        <img class="container" src="https://psds.co.za/wp-content/uploads/2022/12/PSDS-SLIDERS-2-1.jpg" alt="Image 3" height="770em">
+        <img class="container" src="https://yoursay.plos.org/wp-content/uploads/sites/13/2023/01/hiv-218541_1920-1120x630.jpg" alt="Image 4" height="670em" width="100%">
+        <img class="container" src="https://truthout.org/app/uploads/2023/01/2023-0125-hiv-stigma.jpg" height="100%" width="100%">
+    </div>
+   <script>
+    let count = 0; const animations = [ { name: "bounce", duration: 1000 }, { name: "fadeIn", duration: 1000 }, { name: "fadeOut", duration: 1000 }, { name: "flip", duration: 1000 }, { name: "rotateIn", duration: 1000 }, { name: "rotateOut", duration: 1000 }, { name: "zoomIn", duration: 1000 }, { name: "zoomOut", duration: 1000 }, { name: "slideInDown", duration: 1000 }, { name: "slideInLeft", duration: 1000 }, { name: "slideInRight", duration: 1000 }, { name: "slideInUp", duration: 1000 }, { name: "slideOutDown", duration: 1000 }, { name: "slideOutLeft", duration: 1000 }, { name: "slideOutRight", duration: 1000 }, { name: "slideOutUp", duration: 1000 }, ]; const container = document.querySelector(".container"); const images = container.querySelectorAll("img"); images.forEach((image, index) => { image.addEventListener("animationend", () => { count++; if (count >= animations.length) { count = 0; } const animation = animations[count]; image.classList.remove(animation.name); image.classList.add(animation.name); }); });
+   </script>
+    
 </body>
 </html>
