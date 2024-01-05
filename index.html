@@ -108,9 +108,33 @@
         <img class="container" src="https://yoursay.plos.org/wp-content/uploads/sites/13/2023/01/hiv-218541_1920-1120x630.jpg" alt="Image 4" height="670em" width="100%">
         <img class="container" src="https://truthout.org/app/uploads/2023/01/2023-0125-hiv-stigma.jpg" height="100%" width="100%">
     </div>
-   <script>
-    let count = 0; const animations = [ { name: "bounce", duration: 1000 }, { name: "fadeIn", duration: 1000 }, { name: "fadeOut", duration: 1000 }, { name: "flip", duration: 1000 }, { name: "rotateIn", duration: 1000 }, { name: "rotateOut", duration: 1000 }, { name: "zoomIn", duration: 1000 }, { name: "zoomOut", duration: 1000 }, { name: "slideInDown", duration: 1000 }, { name: "slideInLeft", duration: 1000 }, { name: "slideInRight", duration: 1000 }, { name: "slideInUp", duration: 1000 }, { name: "slideOutDown", duration: 1000 }, { name: "slideOutLeft", duration: 1000 }, { name: "slideOutRight", duration: 1000 }, { name: "slideOutUp", duration: 1000 }, ]; const container = document.querySelector(".container"); const images = container.querySelectorAll("img"); images.forEach((image, index) => { image.addEventListener("animationend", () => { count++; if (count >= animations.length) { count = 0; } const animation = animations[count]; image.classList.remove(animation.name); image.classList.add(animation.name); }); });
-   </script>
+<!--    <script>
+    let count = 0;
+       const animations = [ { name: "bounce", duration: 1000 }, 
+                           { name: "fadeIn", duration: 1000 },
+                           { name: "fadeOut", duration: 1000 }, 
+                           { name: "flip", duration: 1000 },
+                           { name: "rotateIn", duration: 1000 }, 
+                           { name: "rotateOut", duration: 1000 }, 
+                           { name: "zoomIn", duration: 1000 }, 
+                           { name: "zoomOut", duration: 1000 }, 
+                           { name: "slideInDown", duration: 1000 },
+                           { name: "slideInLeft", duration: 1000 },
+                           { name: "slideInRight", duration: 1000 }, 
+                           { name: "slideInUp", duration: 1000 }, 
+                           { name: "slideOutDown", duration: 1000 }, 
+                           { name: "slideOutLeft", duration: 1000 }, 
+                           { name: "slideOutRight", duration: 1000 }, 
+                           { name: "slideOutUp", duration: 1000 }, ]; 
+       const container = document.querySelector(".container"); 
+       const images = container.querySelectorAll("img"); 
+       images.forEach((image, index) => 
+           { image.addEventListener("animationend", () => { count++; 
+        if (count >= animations.length) { count = 0; } 
+            const animation = animations[count]; 
+             image.classList.remove(animation.name); 
+              image.classList.add(animation.name); }); });
+   </script> -->
     
 </body>
 </html>
